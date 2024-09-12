@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Background Changer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.5s ease;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .color-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .color-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .color-button:hover {
+            transform: scale(1.2);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Change the Background Color</h1>
+        <div class="color-buttons">
+            <button class="color-button" style="background-color: #FF5733;" onclick="changeBackgroundColor('#FF5733')"></button>
+            <button class="color-button" style="background-color: #33FF57;" onclick="changeBackgroundColor('#33FF57')"></button>
+            <button class="color-button" style="background-color: #3357FF;" onclick="changeBackgroundColor('#3357FF')"></button>
+            <button class="color-button" style="background-color: #FF33A1;" onclick="changeBackgroundColor('#FF33A1')"></button>
+            <button class="color-button" style="background-color: #FFD700;" onclick="changeBackgroundColor('#FFD700')"></button>
+        </div>
+        <div class="footer">Designed by the Greatest Chef 🧑‍🍳</div>
+    </div>
+
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>
